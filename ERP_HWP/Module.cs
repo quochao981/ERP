@@ -26,8 +26,8 @@ public class FinishedGood : BatchRecord
     public int Status { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime DeadLine { get; set; }
-    public bool IsBulk { get; set; }
-    public int Quality { get; set; }
+    public bool ProductCode { get; set; }
+    public int Quantity { get; set; }
 
     public List<BatchRecord> BatchRecords { get; set; }
 }
