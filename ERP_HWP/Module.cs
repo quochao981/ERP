@@ -11,7 +11,7 @@ public class Program
 }
 public class SaleOrder : FinishedGood
 {
-    public int OrderID { get; set; }
+    public string OrderID { get; set; }
     public string CustomerID { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime UpdatedDate { get; set; }
