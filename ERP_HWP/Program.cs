@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 public class SaleOrder : FinishedGood
 {
     public string OrderID { get; set; }
@@ -21,7 +22,7 @@ public class FinishedGood
     public int Status { get; set; }
     public DateTime CreatedDate { get; set; }
     public DateTime DeadLine { get; set; }
-    public bool ProductCode { get; set; }
+    public string ProductCode { get; set; }
     public int Quantity { get; set; }
 
 }
@@ -37,8 +38,8 @@ public class Programs
 
         while (!exit)
         {
-            Console.WriteLine("1. Create a new sales order");
-            Console.WriteLine("2. View existing sales orders");
+            Console.WriteLine("1. Please input Finsihed Goods information!");
+            Console.WriteLine("2. View other existing sales orders");
             Console.WriteLine("3. Exit");
             Console.Write("Enter your choice: ");
             string input = Console.ReadLine();
@@ -93,13 +94,14 @@ public class Programs
 
             salesOrder.FinishedGood.Add(finishedGood);
 
-            Console.Write("Add another finished good? (Y/N): ");
+            Console.Write("Choose another finished good? (Y/N): ");
             string choice = Console.ReadLine();
             addFinishedGoods = (choice.Equals("Y", StringComparison.OrdinalIgnoreCase));
             Console.WriteLine();
         }
-
         salesOrders.Add(salesOrder);
+
+
         Console.WriteLine("Sales order created successfully. Order number: " + salesOrder.OrderID);
     }
 
@@ -132,3 +134,8 @@ public class Programs
         return orderNumber;
     }
 }
+
+/**#region connection string
+string connectionString_Users = "Data Source=192.168.88.8;Initial Catalog=ERPTest1;User ID=erptestAdmin;Password=!@#QWEasd";
+SqlConnection connection = new SqlConnection(connectionString_Users);
+#endregion*/
