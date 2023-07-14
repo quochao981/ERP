@@ -99,7 +99,7 @@ public class Programs
             Console.WriteLine();
         }
 
-        salesOrder.Add(salesOrder);
+        salesOrders.Add(salesOrder);
         Console.WriteLine("Sales order created successfully. Order number: " + salesOrder.OrderID);
     }
 
